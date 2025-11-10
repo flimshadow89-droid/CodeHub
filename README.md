@@ -1,46 +1,67 @@
-<h1 align="center">🚀 CodeHub</h1>
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=00C2FF&center=true&vCenter=true&width=435&lines=Welcome+to+CodeHub!;Building+Tools%2C+Bots+%26+Scripts;By+Developers%2C+For+Developers" alt="Typing Animation" />
+</h1>
+
 <p align="center">
-  <b>Building smarter code, one project at a time.</b><br>
-  💻 Bots • 🧩 Tools • 🌐 Web • 🎮 Roblox
+  <img src="https://img.shields.io/github/stars/filmshadow89-droid?color=yellow&style=for-the-badge"/>
+  <img src="https://img.shields.io/github/forks/filmshadow89-droid?color=blue&style=for-the-badge"/>
+  <img src="https://img.shields.io/github/repo-size/filmshadow89-droid/CodeHub?color=red&style=for-the-badge"/>
 </p>
 
 ---
 
-### 🧠 Welcome to CodeHub
-Hey there! I'm creating **tools, bots, and scripts** across multiple languages.  
-My mission: build useful stuff, share it, and help others learn in the process. 🌟  
+### 🧠 About CodeHub
+Hey there! 👋  
+I'm building **tools, bots, and scripts** across multiple languages — from Discord automation to web utilities.  
+> ✨ *Explore, learn, and contribute — CodeHub is open for all creative devs!*
 
 ---
 
-### ⚙️ Languages I Use
+### ⚙️ Languages & Tools
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white"/>
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/>
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+  <img src="https://skillicons.dev/icons?i=python,javascript,lua,html,css,github,discord,git,vscode&theme=dark" />
 </p>
 
 ---
 
 ### 🚀 Featured Projects
-| Project | Description |
-|----------|--------------|
+| 🚩 Project | Description |
+|-------------|-------------|
 | 🎵 **BeatHub Bot** | A high-quality Discord music bot |
 | 🛡️ **DevSupport Helper** | A moderation + support bot |
-| ⚙️ **CodeHub Scripts** | A collection of open-source utilities |
+| ⚙️ **CodeHub Scripts** | Open-source utilities for devs |
 
 ---
 
-### 💬 Connect
+### 🌐 Join Our Discords
 <p align="center">
-  <a href="https://discord.com/users/"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white"/></a>
-  <a href="https://github.com/YourUsername"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=react&logoColor=61DAFB"/></a>
+  <a href="https://discord.gg/NnGRQstzVq"><img src="https://img.shields.io/badge/🌍%20Uncopylocked%20Community-5865F2?style=for-the-badge&logo=discord&logoColor=white"/></a><br>
+  <a href="https://discord.gg/gs468encMA"><img src="https://img.shields.io/badge/🛠️%20Support%20Server-43B581?style=for-the-badge&logo=discord&logoColor=white"/></a><br>
+  <a href="https://discord.gg/UuWHz4AkMQ"><img src="https://img.shields.io/badge/🎶%20Music%20Server-FAA61A?style=for-the-badge&logo=discord&logoColor=white"/></a><br>
+  <a href="https://discord.gg/8rPc37zWFA"><img src="https://img.shields.io/badge/💻%20Coding%20Server-5865F2?style=for-the-badge&logo=discord&logoColor=white"/></a>
+</p>
+
+---
+
+### 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=filmshadow89-droid&show_icons=true&theme=tokyonight&hide_border=true" height="165"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=filmshadow89-droid&theme=tokyonight&hide_border=true" height="165"/>
+</p>
+
+---
+
+### ⚡ Fun Extras
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=filmshadow89-droid&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10"/>
 </p>
 
 ---
 
 <p align="center">
-  <i>⭐ Code smarter. Build bigger. Share freely.</i>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=22&pause=1000&color=00FF9F&center=true&vCenter=true&width=435&lines=⭐+Code+Smarter.;💡+Build+Bigger.;🤝+Share+Freely." alt="Typing Animation" />
+</p>
+
+<p align="center">
+  <sub>Made with ❤️ by CodeHub Devs</sub>
 </p>
