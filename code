@@ -1,0 +1,423 @@
+import React, { useState } from 'react';
+import { Copy, Check, Folder, File } from 'lucide-react';
+
+const CodeBlock = ({ title, code, language = "bash" }) => {
+  const [copied, setCopied] = useState(false);
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(code);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <div className="mb-6">
+      <div className="flex items-center justify-between bg-gray-800 px-4 py-2 rounded-t-lg">
+        <span className="text-gray-300 font-semibold text-sm">{title}</span>
+        <button
+          onClick={copyToClipboard}
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-3 py-1.5 rounded transition-colors text-sm"
+        >
+          {copied ? (
+            <>
+              <Check size={16} className="text-white" />
+              <span className="text-white">Copied!</span>
+            </>
+          ) : (
+            <>
+              <Copy size={16} className="text-white" />
+              <span className="text-white">Copy Code</span>
+            </>
+          )}
+        </button>
+      </div>
+      <div className="bg-gray-900 p-4 rounded-b-lg overflow-x-auto max-h-96">
+        <pre className="text-sm">
+          <code className="text-gray-100 font-mono whitespace-pre">{code}</code>
+        </pre>
+      </div>
+    </div>
+  );
+};
+
+const FileTree = () => {
+  return (
+    <div className="bg-gradient-to-r from-purple-900 to-indigo-900 p-5 rounded-lg mb-6 border border-purple-700">
+      <h3 className="text-white font-bold mb-4 flex items-center gap-2 text-lg">
+        <Folder className="text-yellow-400" size={24} />
+        📁 Project Folder Structure
+      </h3>
+      <div className="font-mono text-base text-gray-200 space-y-2 bg-black bg-opacity-30 p-4 rounded">
+        <div className="text-yellow-300 font-bold">chatbot-web/</div>
+        <div className="pl-6 flex items-center gap-2">
+          <File className="text-orange-400" size={16} />
+          <span>index.html</span>
+        </div>
+        <div className="pl-6 flex items-center gap-2">
+          <File className="text-blue-400" size={16} />
+          <span>style.css</span>
+        </div>
+        <div className="pl-6 flex items-center gap-2">
+          <File className="text-yellow-400" size={16} />
+          <span>script.js</span>
+        </div>
+        <div className="pl-6 flex items-center gap-2">
+          <File className="text-green-400" size={16} />
+          <span>README.md</span>
+        </div>
+        <div className="pl-6 flex items-center gap-2">
+          <File className="text-gray-400" size={16} />
+          <span>.gitignore</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default function GitHubChatbotGuide() {
+  const htmlCode = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>AI Chatbot</h1>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chat-input-container">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Type your message..." 
+                class="chat-input"
+            >
+            <button onclick="sendMessage()" class="send-button">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>`;
+
+  const cssCode = `* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 600px;
+    height: 80vh;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 18px;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-message {
+    background: #667eea;
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.bot-message {
+    background: #f0f0f0;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 20px;
+    background: #f9f9f9;
+    border-top: 1px solid #e0e0e0;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.chat-input:focus {
+    border-color: #667eea;
+}
+
+.send-button {
+    margin-left: 10px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s;
+}
+
+.send-button:hover {
+    transform: scale(1.05);
+}
+
+.send-button:active {
+    transform: scale(0.95);
+}`;
+
+  const jsCode = `function sendMessage() {
+    const input = document.getElementById('userInput');
+    const message = input.value.trim();
+    
+    if (message === '') return;
+    
+    // Add user message
+    addMessage(message, 'user-message');
+    input.value = '';
+    
+    // Simulate bot response
+    setTimeout(() => {
+        const botResponse = getBotResponse(message);
+        addMessage(botResponse, 'bot-message');
+    }, 500);
+}
+
+function addMessage(text, className) {
+    const messagesContainer = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = \`message \${className}\`;
+    messageDiv.innerHTML = \`<p>\${text}</p>\`;
+    messagesContainer.appendChild(messageDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+}
+
+function getBotResponse(userMessage) {
+    const responses = {
+        'hello': 'Hello! How can I assist you today?',
+        'hi': 'Hi there! What can I do for you?',
+        'how are you': "I'm doing great! Thanks for asking. How can I help you?",
+        'bye': 'Goodbye! Have a great day!',
+        'help': 'I can answer questions and have a conversation with you. Try asking me something!',
+    };
+    
+    const lowerMessage = userMessage.toLowerCase();
+    
+    for (let key in responses) {
+        if (lowerMessage.includes(key)) {
+            return responses[key];
+        }
+    }
+    
+    return "I understand. Could you tell me more about that?";
+}
+
+// Allow Enter key to send message
+document.getElementById('userInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        sendMessage();
+    }
+});`;
+
+  const readmeCode = `# AI Chatbot Web Application
+
+A simple, elegant chatbot web interface built with vanilla HTML, CSS, and JavaScript.
+
+## Features
+
+- Clean and modern UI design
+- Responsive layout
+- Smooth animations
+- Easy to customize
+
+## Setup
+
+1. Clone this repository
+2. Open \`index.html\` in your web browser
+3. Start chatting!
+
+## Customization
+
+- Edit \`script.js\` to add more bot responses
+- Modify \`style.css\` to change the appearance
+- Update \`index.html\` for structure changes
+
+## Future Enhancements
+
+- Connect to AI API (OpenAI, Claude, etc.)
+- Add chat history persistence
+- Include typing indicators
+- Add file upload capability
+
+## License
+
+MIT License - Feel free to use and modify!`;
+
+  const gitignoreCode = `# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log`;
+
+  const setupCommands = `# Create project directory
+mkdir chatbot-web
+cd chatbot-web
+
+# Initialize git repository
+git init
+
+# Create files
+touch index.html style.css script.js README.md .gitignore
+
+# Add all files
+git add .
+
+# First commit
+git commit -m "Initial commit: Basic chatbot structure"
+
+# Connect to GitHub (replace USERNAME and REPO)
+git remote add origin https://github.com/USERNAME/REPO.git
+
+# Push to GitHub
+git branch -M main
+git push -u origin main`;
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-8 pt-6">
+          <h1 className="text-5xl font-bold text-white mb-3 drop-shadow-lg">
+            🤖 GitHub Chatbot Project
+          </h1>
+          <p className="text-gray-300 text-lg">Complete code with copy buttons - Click to copy any code block!</p>
+        </div>
+
+        <FileTree />
+
+        <div className="space-y-6">
+          <div className="bg-gradient-to-r from-orange-600 to-red-600 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">📄 FILE 1: index.html</h2>
+              <CodeBlock title="index.html - Main HTML Structure" code={htmlCode} language="html" />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">🎨 FILE 2: style.css</h2>
+              <CodeBlock title="style.css - Chatbot Styling" code={cssCode} language="css" />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-yellow-600 to-orange-600 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">⚡ FILE 3: script.js</h2>
+              <CodeBlock title="script.js - Chatbot Logic" code={jsCode} language="javascript" />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-green-600 to-teal-600 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">📖 FILE 4: README.md</h2>
+              <CodeBlock title="README.md - Documentation" code={readmeCode} language="markdown" />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-gray-600 to-gray-700 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">🚫 FILE 5: .gitignore</h2>
+              <CodeBlock title=".gitignore - Ignored Files" code={gitignoreCode} language="text" />
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-1 rounded-lg">
+            <div className="bg-gray-900 rounded-lg p-4">
+              <h2 className="text-white text-xl font-bold mb-3">🚀 Git Setup Commands</h2>
+              <CodeBlock title="Terminal Commands - Setup GitHub" code={setupCommands} language="bash" />
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg p-6 mt-8 shadow-xl">
+          <h3 className="text-white font-bold text-2xl mb-4">📝 How to Use:</h3>
+          <ol className="text-white text-lg space-y-3 list-decimal list-inside">
+            <li>Click the <strong>"Copy Code"</strong> button on each code block</li>
+            <li>Create each file in your project folder</li>
+            <li>Paste the copied code into each file</li>
+            <li>Run the Git commands to push to GitHub</li>
+            <li>Open index.html in your browser to test!</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  );
+}
