@@ -1,6 +1,15 @@
+<!-- Banner -->
+<p align="center">
+  <img src="https://robots.net/wp-content/uploads/2023/11/what-is-coding-1699733530.jpg" width="100%" alt="CodeHub Banner"/>
+</p>
+
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=30&pause=1000&color=00C2FF&center=true&vCenter=true&width=435&lines=Welcome+to+CodeHub!;Building+Tools%2C+Bots+%26+Scripts;By+Developers%2C+For+Developers" alt="Typing Animation" />
+  𝓧𝔂𝓡𝓸𝓷𝓔𝔁 | 𝓓𝓔𝓥
 </h1>
+
+<h3 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=28&pause=1000&color=00C2FF&center=true&vCenter=true&width=600&lines=Welcome+to+CodeHub!;Building+Tools%2C+Bots+%26+Scripts;By+Developers%2C+For+Developers" alt="Typing Animation" />
+</h3>
 
 <p align="center">
   <img src="https://img.shields.io/github/stars/filmshadow89-droid?color=yellow&style=for-the-badge"/>
@@ -12,7 +21,7 @@
 
 ### 🧠 About CodeHub
 Hey there! 👋  
-I'm building **tools, bots, and scripts** across multiple languages — from Discord automation to web utilities.  
+I'm **𝓧𝔂𝓡𝓸𝓷𝓔𝔁**, a developer building tools, bots, and scripts across multiple languages — from Discord automation to web utilities.  
 > ✨ *Explore, learn, and contribute — CodeHub is open for all creative devs!*
 
 ---
@@ -51,7 +60,7 @@ I'm building **tools, bots, and scripts** across multiple languages — from Dis
 
 ---
 
-### ⚡ Fun Extras
+### 🏆 Achievements
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=filmshadow89-droid&theme=tokyonight&no-frame=true&no-bg=true&margin-w=10"/>
 </p>
@@ -63,5 +72,5 @@ I'm building **tools, bots, and scripts** across multiple languages — from Dis
 </p>
 
 <p align="center">
-  <sub>Made with ❤️ by CodeHub Devs</sub>
+  <sub>Made with ❤️ by 𝓧𝔂𝓡𝓸𝓷𝓔𝔁 | 𝓓𝓔𝓥</sub>
 </p>
